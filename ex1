@@ -1,0 +1,46 @@
+class Shapes():
+    
+
+    class Rectangle():
+
+        def __init__(self, longS, shortS):
+            self.longS = longS
+            self.shortS = shortS
+
+        def area(self):
+            return self.longS * self.shortS
+
+    class Square(Rectangle):
+        
+        def __init__(self, side):
+            self.longS = side
+            self.shortS = side
+
+    class Ellipse():
+
+        def __init__(self,longR, shortR):
+            self.longR = longR
+            self.shortR = shortR
+
+        def area(self):
+            return self.longR * self.shortR * 3.14
+
+
+    class Circle(Ellipse):
+        def __init__(self, radius):
+            self.longR = radius
+            self.shortR = radius
+
+      
+r1 = Rectangle(5, 4)
+r2 = Rectangle(6, 5)
+print("Rectangle 1 area: ", r1.area())
+print("Rectangle 2 area: ", r2.area())
+sq1 = Square(5)
+print("Square 1 area: ", sq1.area())
+e1 = Ellipse(2, 9)
+print("Ellipse 1 area: ", e1.area())
+circ1 = Circle(2)
+print("Circle area: ", circ1.area()) 
+
+    
